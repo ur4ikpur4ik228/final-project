@@ -19,7 +19,17 @@ body {
 
 h1 {
     text-align: center;
+    font-size: 2rem;
+}
+
+.black-text {
+    color: #000;
+    font-family: Montserrat, sans-serif;
+}
+
+.orange-text {
     color: #ff9900;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .content {
@@ -32,53 +42,58 @@ h1 {
 
 .image-container {
     flex: 1;
-    max-width: 300px; 
+    max-width: 600px; /* Ширина 600px */
+    width: 600px; /* Ширина 600px */
+    height: 400px; /* Висота 400px */
+    overflow: hidden;
+    border-radius: 15px; /* Радіус закруглення 15px */
     position: relative;
+}
 
-    img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-    .play-button {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 60px;
-        height: 60px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 
-        svg circle {
-            fill: rgba(128, 128, 128, 0.7); 
-        }
-    }
+.play-button svg circle {
+    fill: rgba(128, 128, 128, 0.7);
 }
 
 .text-container {
     flex: 2;
     margin-left: 20px;
+}
 
-    h2 {
-        color: #333;
-    }
+h2 {
+    color: #333;
+}
 
-    ul {
-        list-style-type: none;
-        padding: 0;
+.no-break {
+    display: inline-block;
+    margin-top: 10px; /* Відстань між рядками */
+}
 
-        li {
-            background: url('bullet.png') no-repeat left center;
-            padding-left: 20px;
-            margin-bottom: 10px;
-            line-height: 1.5;
-            color: #666;
-        }
-    }
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    color: #666;
 }
 
 @media (max-width: 768px) {
@@ -107,32 +122,30 @@ h1 {
         font-size: 1.5rem;
     }
 
-    .text-container {
-        h2 {
-            font-size: 1.2rem;
-        }
+    .text-container h2 {
+        font-size: 1.2rem;
+    }
 
-        ul li {
-            font-size: 0.9rem;
-        }
+    ul li {
+        font-size: 0.9rem;
     }
 
     .play-button {
         width: 50px;
         height: 50px;
-        
-        svg {
-            width: 50px;
-            height: 50px;
-        }
+    }
 
-        svg circle {
-            fill: rgba(128, 128, 128, 0.7);
-        }
+    .play-button svg {
+        width: 50px;
+        height: 50px;
+    }
 
-        svg polygon {
-            fill: white;
-        }
+    .play-button svg circle {
+        fill: rgba(128, 128, 128, 0.7);
+    }
+
+    .play-button svg polygon {
+        fill: white;
     }
 }
 
@@ -146,31 +159,29 @@ h1 {
         font-size: 1.2rem;
     }
 
-    .text-container {
-        h2 {
-            font-size: 1rem;
-        }
+    .text-container h2 {
+        font-size: 1rem;
+    }
 
-        ul li {
-            font-size: 0.8rem;
-        }
+    ul li {
+        font-size: 0.8rem;
     }
 
     .play-button {
         width: 40px;
         height: 40px;
-        
-        svg {
-            width: 40px;
-            height: 40px;
-        }
+    }
 
-        svg circle {
-            fill: rgba(128, 128, 128, 0.7);
-        }
+    .play-button svg {
+        width: 40px;
+        height: 40px;
+    }
 
-        svg polygon {
-            fill: white;
-        }
+    .play-button svg circle {
+        fill: rgba(128, 128, 128, 0.7);
+    }
+
+    .play-button svg polygon {
+        fill: white;
     }
 }
