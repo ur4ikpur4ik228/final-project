@@ -21,7 +21,7 @@
 @media (max-width: 430px) {
   .videoblog .videoblog__container--image {
     height: 500px !important;
-    background-image: url("./image.png") !important;
+    background-image: url("./img/image.png") !important;
   }
   .videoblog .videoblog__container--content .videoblog__container--content--title {
     width: 307px !important;
@@ -60,7 +60,7 @@
   padding: 0 20px 0 20px;
 }
 .videoblog .videoblog__container .videoblog__container--image {
-  background-image: url("./final.png");
+  background-image: url("./img/final.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
